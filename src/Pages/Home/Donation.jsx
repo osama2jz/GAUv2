@@ -13,9 +13,12 @@ import { useMediaQuery } from "@mantine/hooks";
 import Button from "../../components/Button";
 import routeNames from "../../routes/routeNames";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 const Donation = () => {
   const { classes } = useStyles();
+  const {translate}=useContext(UserContext)
   const navigate=useNavigate()
   const matches600 = useMediaQuery("(min-width: 600px)");
   return (
@@ -39,7 +42,7 @@ const Donation = () => {
               color="white"
               // style={{ fontVariant: "small-caps" }}
             >
-              <b className="fgColorF">Make </b> a Donation{" "}
+              <b className="fgColorF">{translate("Make a Donation")}{" "} </b>
             </Text>
             <Text
               size={matches600 ? "1.2vw" : "2.4vw"}
@@ -50,12 +53,9 @@ const Donation = () => {
               ml={"auto"}
               mr={"auto"}
             >
-              Your donation can empower the Gypsy community in Spain. Give today
-              and make a lasting impact. Your contribution will directly support
-              our efforts to empower and uplift Gypsy individuals and families.
-              With your generous donation, we can provide education, healthcare,
-              and social support programs tailored to their specific needs
+              {("Your donation can empower the Gypsy community in Spain. Give today and make a lasting impact. Your contribution will directly support our efforts to empower and uplift Gypsy individuals and families. With your generous donation, we can provide education, healthcare, and social support programs tailored to their specific needs")}
             </Text>
+            
           </div>
           <Button
             label="Donate now"

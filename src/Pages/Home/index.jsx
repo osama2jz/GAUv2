@@ -14,11 +14,14 @@ import { useStyles } from "./styles";
 import s1 from "../../assets/icons/s1.png";
 import s2 from "../../assets/icons/s2.png";
 import s3 from "../../assets/icons/s3.png";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 const index = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
   const navigate = useNavigate();
   const { classes } = useStyles();
+  const {translate}=useContext(UserContext)
   const data = [
     {
       image: s1,
@@ -52,7 +55,7 @@ const index = () => {
       />
       {/* <Container w={"100%"} bg={"red"}> */}
       <Title align="center" size={"40px"} mt="xl">
-        Our Services
+        {translate("Our Services")}
       </Title>
       <Flex
         justify={"flex-end"}
@@ -61,7 +64,7 @@ const index = () => {
         onClick={() => navigate(routeNames.general.services)}
       >
         <Text color="#327BBF" fw={"bold"}>
-          Learn More
+          {translate("Learn More")}
         </Text>
         <ChevronsRight color="#327BBF" />
       </Flex>

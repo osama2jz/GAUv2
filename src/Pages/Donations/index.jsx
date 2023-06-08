@@ -73,7 +73,7 @@ const Donations = () => {
           color="white"
           style={{ borderBottom: "2px solid white" }}
         >
-          Services
+          Donations
         </Title>
       </Container>
       <Flex

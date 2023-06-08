@@ -5,10 +5,13 @@ import { ChevronsRight } from "tabler-icons-react";
 import videoBG from "../../assets/videoBg.svg";
 import routeNames from "../../routes/routeNames";
 import { useStyles } from "./styles";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 const AboutUs = () => {
   const matches600 = useMediaQuery("(min-width :600px)");
   const { classes } = useStyles();
+  const {translate}=useContext(UserContext)
   const navigate = useNavigate();
   return (
     <>
@@ -43,19 +46,10 @@ const AboutUs = () => {
         <Grid.Col span={12} md={6} lg={5} p={"xl"}>
           <Group spacing={"md"}>
             <Title align="center" size={"40px"}>
-              About Us
+              {translate("About Us")}
             </Title>
             <Text align="justify" size={"lg"}>
-              Welcome to our NGO dedicated to empowering the Gypsy community in
-              Spain. We are passionate about promoting social inclusion,
-              fighting discrimination, and improving the lives of Gypsy people
-              across the country. Our organization is committed to promoting
-              social inclusion, advocating for equal rights, and addressing the
-              unique challenges faced by the Gypsy community. With a deep
-              understanding of their cultural heritage and the barriers they
-              encounter, we strive to empower Gypsy individuals and families by
-              providing educational opportunities, access to healthcare, and
-              social support.
+              {translate("Welcome to our NGO dedicated to empowering the Gypsy community in Spain. We are passionate about promoting social inclusion,fighting discrimination, and improving the lives of Gypsy people across the country. Our organization is committed to promoting social inclusion, advocating for equal rights, and addressing the unique challenges faced by the Gypsy community. With a deep understanding of their cultural heritage and the barriers they encounter, we strive to empower Gypsy individuals and families by providing educational opportunities, access to healthcare, and social support.")}
             </Text>
             <Flex
               justify={"flex-end"}
@@ -64,7 +58,7 @@ const AboutUs = () => {
               onClick={() => navigate(routeNames.general.aboutUs)}
             >
               <Text color="#327BBF" fw={"bold"}>
-                Learn More
+                {translate("Learn More")}
               </Text>
               <ChevronsRight color="#327BBF" />
             </Flex>

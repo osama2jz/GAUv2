@@ -38,10 +38,10 @@ export const Service = ({ data }) => {
           alt="Norway"
         />
         {/* </Card.Section> */}
-        <h3>{data?.title}</h3>
+        <h3>{translate(data?.title)}</h3>
 
         <Text size="md" mt={"-10px"}>
-        {data?.des}
+        {translate(data?.des)}
         </Text>
 
         <Group mt={"md"}>
@@ -54,13 +54,13 @@ export const Service = ({ data }) => {
           <img src={profile} height={"20px"} width={"20px"} />
 
           <Text size="sm" color="dimmed">
-            {data?.work}
+            {translate(data?.work)}
           </Text>
         </Group>
         <Group>
           <Star size={18} strokeWidth={2} color={"#d2ca79"} />
           <Text size="sm" color="dimmed">
-           {`${data?.branches} Branches`}
+           {`${data?.branches} ${translate("Branches")}`}
           </Text>
         </Group>
       </Card>

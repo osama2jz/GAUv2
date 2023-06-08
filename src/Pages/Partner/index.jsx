@@ -37,6 +37,8 @@ const About = () => {
           top={"50%"}
           left={"40%"}
           color="white"
+          style={{ borderBottom: "2px solid white" }}
+
         >
           Our Partner
         </Title>

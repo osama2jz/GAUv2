@@ -62,6 +62,8 @@ const About = () => {
             width: "100%",
             height: "100%",
             backgroundColor: "rgb(0,0,0,0.2)",
+        
+
           }}
         ></div>
         <Title
@@ -70,6 +72,8 @@ const About = () => {
           top={"50%"}
           left={"40%"}
           color="white"
+          style={{ borderBottom: "2px solid white" }}
+
         >
           About Us
         </Title>
