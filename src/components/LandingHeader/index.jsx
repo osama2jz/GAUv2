@@ -57,7 +57,7 @@ export const LandingHeader = ({ opened, toggle }) => {
         <Link className={classes.link} to={routeNames.general.landing}>
           {translate("Our Partner")}
         </Link>
-        <Link className={classes.link} to={routeNames.general.landing}>
+        <Link className={classes.link} to={routeNames.general.contactUs}>
           {translate("Contact Us")}
         </Link>
       </Flex>

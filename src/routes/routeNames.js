@@ -5,6 +5,8 @@ const routeNames = {
     services: '/services',
     aboutUs: "/about-us",
     donate: "/donation",
+    contactUs: "/contact-us",
+
   },
 };
 

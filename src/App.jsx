@@ -6,6 +6,7 @@ import Layout from "./layout/General";
 import Home from "./Pages/Home";
 import Services from "./Pages/Services";
 import AboutUs from "./Pages/About";
+import ContactUs from "./Pages/ContactUs";
 
 function App() {
   return (
@@ -15,7 +16,11 @@ function App() {
           <Route path={routeNames.general.landing} element={<Layout />}>
             <Route path={routeNames.general.landing} element={<Home />} />
             <Route path={routeNames.general.services} element={<Services />} />
-            <Route path={routeNames.general.aboutUs} element={<AboutUs/>}/>
+            <Route path={routeNames.general.aboutUs} element={<AboutUs />} />
+            <Route
+              path={routeNames.general.contactUs}
+              element={<ContactUs />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>
