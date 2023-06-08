@@ -55,7 +55,14 @@ const Services = () => {
             backgroundColor: "rgb(0,0,0,0.2)",
           }}
         ></div>
-        <Title order={1} pos={"absolute"} top={"50%"} left={"40%"} color="white">
+        <Title
+          order={1}
+          pos={"absolute"}
+          top={"50%"}
+          left={"40%"}
+          color="white"
+          style={{ borderBottom: "2px solid white" }}
+        >
           Services
         </Title>
       </Container>

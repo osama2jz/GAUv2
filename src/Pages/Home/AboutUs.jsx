@@ -1,23 +1,43 @@
-import { Grid, Group, Text, Title } from "@mantine/core";
-
-import { Star } from "tabler-icons-react";
-
+import { Flex, Grid, Group, Text, Title } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
+import { useNavigate } from "react-router-dom";
+import { ChevronsRight } from "tabler-icons-react";
+import videoBG from "../../assets/videoBg.svg";
+import routeNames from "../../routes/routeNames";
+import { useStyles } from "./styles";
 
 const AboutUs = () => {
-  
   const matches600 = useMediaQuery("(min-width :600px)");
+  const { classes } = useStyles();
+  const navigate = useNavigate();
   return (
     <>
-      <Grid mt={matches600?"xl":"md"} p={matches600?"xl":"md"}>
-        <Grid.Col span={12} md={6} lg={5.5} bg={"#327BBF"} p={"xl"}>
+      <Grid
+        mt={matches600 ? "xl" : "md"}
+        p={matches600 ? "xl" : "md"}
+        m="auto"
+        w="90%"
+      >
+        <Grid.Col
+          span={12}
+          md={6}
+          lg={5.5}
+          pos={"relative"}
+          style={{
+            backgroundImage: `url(${videoBG})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+          }}
+          h={"390px"}
+        >
           <video
             src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
             autoPlay
             muted
             loop
-            width={matches600?"590rem":"400rem"}
+            width={matches600 ? "450rem" : "00rem"}
             height={"400rem"}
+            style={{ margin: "auto" }}
           />
         </Grid.Col>
         <Grid.Col span={12} md={6} lg={5} p={"xl"}>
@@ -37,12 +57,17 @@ const AboutUs = () => {
               providing educational opportunities, access to healthcare, and
               social support.
             </Text>
-            <Group position="right">
+            <Flex
+              justify={"flex-end"}
+              m={"md"}
+              className={classes.more}
+              onClick={() => navigate(routeNames.general.aboutUs)}
+            >
               <Text color="#327BBF" fw={"bold"}>
                 Learn More
               </Text>
-              <Star />
-            </Group>
+              <ChevronsRight color="#327BBF" />
+            </Flex>
           </Group>
         </Grid.Col>
       </Grid>

@@ -25,8 +25,7 @@ export const useStyles = createStyles((theme) => ({
     [`@media (max-width: 600px)`]: {
       flexDirection: "column",
       height: "auto",
-      gap:"15px"
-      
+      gap: "15px",
 
       // position: "absolute",
       // top: "80px",
@@ -45,5 +44,8 @@ export const useStyles = createStyles((theme) => ({
     gap: "5px",
     border: "2px solid white",
     padding: "15px",
+  },
+  more: {
+    cursor: "pointer",
   },
 }));

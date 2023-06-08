@@ -1,16 +1,21 @@
-import Carasoul from "./Carasole";
+import { Flex, Text, Title } from "@mantine/core";
+import { ChevronsRight } from "tabler-icons-react";
 import { Service } from "../General/Service";
-import { Container, Flex, Grid, Group, Text, Title } from "@mantine/core";
-import { Star } from "tabler-icons-react";
 import AboutUs from "./AboutUs";
+import Carasoul from "./Carasole";
 import Donation from "./Donation";
+import routeNames from "../../routes/routeNames";
 import { useMediaQuery } from "@mantine/hooks";
+import { useNavigate } from "react-router-dom";
 import Partner from "./Partner";
 import Projects from "./Projects";
 import Testimonials from "./Testimonials";
+import { useStyles } from "./styles";
 
 const index = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
+  const navigate = useNavigate();
+  const {classes}=useStyles()
   const data = [
     {
       image:
@@ -37,15 +42,20 @@ const index = () => {
         carouselImages={[{ src: "img1" }, { src: "img2" }, { src: "img3" }]}
       />
       {/* <Container w={"100%"} bg={"red"}> */}
-      <Title align="center" size={"40px"}>
+      <Title align="center" size={"40px"} mt="xl">
         Our Services
       </Title>
-      <Group position="right" m={"md"}>
+      <Flex
+        justify={"flex-end"}
+        m={"md"}
+        className={classes.more}
+        onClick={() => navigate(routeNames.general.services)}
+      >
         <Text color="#327BBF" fw={"bold"}>
           Learn More
         </Text>
-        <Star />
-      </Group>
+        <ChevronsRight color="#327BBF" />
+      </Flex>
       <Flex
         align={"center"}
         justify="center"
