@@ -22,7 +22,12 @@ export const LandingHeader = ({ opened, toggle }) => {
         width: "100vw",
         justifyContent: "space-around",
         alignItems: "center",
-        
+        position: "absolute",
+        zIndex: "11",
+        // top:'100px',
+        // color: "white",
+        borderBottom: "1px solid white",
+        backgroundColor: "transparent",
       }}
       p={"sm"}
     >
@@ -36,12 +41,11 @@ export const LandingHeader = ({ opened, toggle }) => {
           GAU
         </Text>
       </Flex>
-      {isMobile && <Burger opened={opened} onClick={toggle} />}
       <Flex gap={"lg"} align={"center"} className={classes.navigationBar}>
         <Link className={classes.link} to={routeNames.general.landing}>
           {translate("Home")}
         </Link>
-        <Link className={classes.link} to={routeNames.general.landing}>
+        <Link className={classes.link} to={routeNames.general.services}>
           {translate("Services")}
         </Link>
         <Link className={classes.link} to={routeNames.general.aboutUs}>
@@ -56,29 +60,30 @@ export const LandingHeader = ({ opened, toggle }) => {
         <Link className={classes.link} to={routeNames.general.landing}>
           {translate("Contact Us")}
         </Link>
-        {!user?.role ? (
-          <>
-            <Button
-              label={"Sign up"}
-              primary={true}
-              onClick={() => navigate(routeNames.general.signup)}
-            />
-            <Button
-              label={"Log in"}
-              primary={true}
-              onClick={() => navigate(routeNames.general.login)}
-            />
-          </>
-        ) : (
-          <Button
-            onClick={() => {
-              localStorage.removeItem("userData");
-              window.location.reload();
-            }}
-            label={"Logout"}
-          />
-        )}
       </Flex>
+      {!user?.role ? (
+        <Flex gap="md">
+          <Button
+            label={"Sign up"}
+            primary={true}
+            onClick={() => navigate(routeNames.general.signup)}
+          />
+          <Button
+            label={"Log in"}
+            primary={true}
+            onClick={() => navigate(routeNames.general.login)}
+          />
+        </Flex>
+      ) : (
+        <Button
+          onClick={() => {
+            localStorage.removeItem("userData");
+            window.location.reload();
+          }}
+          label={"Logout"}
+        />
+      )}
+      {isMobile && <Burger opened={opened} onClick={toggle} />}
     </Container>
   );
 };
