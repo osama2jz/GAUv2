@@ -6,6 +6,7 @@ import Layout from "./layout/General";
 import Home from "./Pages/Home";
 import Services from "./Pages/Services";
 import AboutUs from "./Pages/About";
+import Donations from "./Pages/Donations";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
           <Route path={routeNames.general.landing} element={<Layout />}>
             <Route path={routeNames.general.landing} element={<Home />} />
             <Route path={routeNames.general.services} element={<Services />} />
-            <Route path={routeNames.general.aboutUs} element={<AboutUs/>}/>
+            <Route path={routeNames.general.aboutUs} element={<AboutUs />} />
+            <Route path={routeNames.general.donate} element={<Donations />} />
           </Route>
         </Routes>
       </BrowserRouter>

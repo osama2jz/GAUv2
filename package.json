@@ -12,6 +12,7 @@
   "dependencies": {
     "@mantine/carousel": "^6.0.13",
     "@mantine/core": "^6.0.13",
+    "@mantine/form": "^6.0.13",
     "axios": "^1.4.0",
     "embla-carousel-react": "^8.0.0-rc07",
     "moment": "^2.29.4",
