@@ -8,6 +8,7 @@ import Services from "./Pages/Services";
 import AboutUs from "./Pages/About";
 import ContactUs from "./Pages/ContactUs";
 import Donations from "./Pages/Donations";
+import Partner from "./Pages/Partner";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route
               path={routeNames.general.contactUs}
               element={<ContactUs  />} />
+              <Route path={routeNames.general.partner} element={<Partner/>}/>
             <Route path={routeNames.general.donate} element={<Donations />}
              />
           </Route>
