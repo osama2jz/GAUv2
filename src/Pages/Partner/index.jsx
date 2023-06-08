@@ -38,7 +38,7 @@ const About = () => {
           left={"40%"}
           color="white"
         >
-          Patner
+          Our Partner
         </Title>
       </Container>
       <Partner />
