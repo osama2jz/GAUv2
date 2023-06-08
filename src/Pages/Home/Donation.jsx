@@ -11,9 +11,12 @@ import { useStyles } from "./styles";
 import { useMediaQuery } from "@mantine/hooks";
 
 import Button from "../../components/Button";
+import routeNames from "../../routes/routeNames";
+import { useNavigate } from "react-router-dom";
 
 const Donation = () => {
   const { classes } = useStyles();
+  const navigate=useNavigate()
   const matches600 = useMediaQuery("(min-width: 600px)");
   return (
     <>
@@ -43,7 +46,7 @@ const Donation = () => {
               // weight="bold"
               align="center"
               color="white"
-              w={matches600 ?"50rem":"30rem"}
+              w={matches600 ? "50rem" : "30rem"}
               ml={"auto"}
               mr={"auto"}
             >
@@ -54,7 +57,12 @@ const Donation = () => {
               and social support programs tailored to their specific needs
             </Text>
           </div>
-          <Button label="Donate now" primary={true} size={matches600 ? "lg" :"md"} />
+          <Button
+            label="Donate now"
+            primary={true}
+            size={matches600 ? "lg" : "md"}
+            onClick={() => navigate(routeNames.general.donate)}
+          />
         </Stack>
       </Card>
     </>
