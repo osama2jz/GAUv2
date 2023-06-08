@@ -66,8 +66,8 @@ const Testimonials = ({ carouselImages }) => {
                 </Title>
                 <Group position="center">
                   <Avatar
-                  style={{border:"6px solid #327BBF"}}
-                    size={matches600 ?150 :100}
+                    style={{ border: "6px solid #327BBF" }}
+                    size={matches600 ? 150 : 100}
                     mb={"md"}
                     radius={100}
                     src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=250&q=80"
@@ -112,8 +112,8 @@ const Testimonials = ({ carouselImages }) => {
         position: "relative",
         backgroundImage: `url(${TestimonialsBackGround})`,
         backgroundSize: "cover",
-        backgroundPosition:'center center',
-        backgroundRepeat:'no-repeat'
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* <SearchBackgroundOpacityDiv /> */}
