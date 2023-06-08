@@ -6,6 +6,8 @@ import AboutUs from "./AboutUs";
 import Donation from "./Donation";
 import { useMediaQuery } from "@mantine/hooks";
 import Partner from "./Partner";
+import Projects from "./Projects";
+import Testimonials from "./Testimonials";
 
 const index = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
@@ -48,7 +50,7 @@ const index = () => {
         align={"center"}
         justify="center"
         m={"md"}
-        direction={matches600 ?"row" :"column"}
+        direction={matches600 ? "row" : "column"}
         gap={"sm"}
       >
         {data.map((item, index) => (
@@ -59,7 +61,11 @@ const index = () => {
       </Flex>
       <AboutUs />
       <Donation />
-      <Partner/>
+      <Partner />
+      <Projects />
+      <Testimonials
+        carouselImages={[{ src: "img1" }, { src: "img2" }, { src: "img3" }]}
+      />
     </>
   );
 };

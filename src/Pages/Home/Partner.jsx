@@ -1,6 +1,5 @@
 import {
   Card,
-  Flex,
   Grid,
   Group,
   Image,
@@ -8,13 +7,11 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import Card1 from "../../assets/icons/Component1.svg";
-import { Star } from "tabler-icons-react";
+
 import Button from "../../components/Button";
 import { useMediaQuery } from "@mantine/hooks";
-import Pic1 from "../../assets/icons/partner1.png" 
-import Pic2 from "../../assets/icons/partner2.png" 
-
+import Pic1 from "../../assets/icons/partner1.png";
+import Pic2 from "../../assets/icons/partner2.png";
 
 const Partner = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
@@ -38,8 +35,8 @@ const Partner = () => {
             withBorder
             w={matches600 ? "25rem" : "18rem"}
             h={matches600 ? "24rem" : "16rem"}
-            ml={matches600?"160px":"120px"}
-            mt={matches600?"-300px":"-200px"}
+            ml={matches600 ? "160px" : "120px"}
+            mt={matches600 ? "-300px" : "-200px"}
           >
             <Image src={Pic1} height={350} alt="Norway" />
           </Card>

@@ -2,8 +2,6 @@ import { Carousel } from "@mantine/carousel";
 import { Container, Image, Paper, Stack, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 // import Autoplay from "embla-carousel-autoplay";
-import React, { useRef } from "react";
-// import SearchBackgroundOpacityDiv from "./SearchBackgroundOpacityDiv";
 import Slider1 from "../../assets/icons/Component1.svg";
 
 const SearchBackground = ({ carouselImages }) => {
@@ -17,7 +15,7 @@ const SearchBackground = ({ carouselImages }) => {
       withIndicators
       loop
       align="start"
-      height={"75vh"}
+      height={matches600?"75vh":"50vh"}
       orientation="vertical"
       draggable={false}
       withControls={false}
@@ -26,7 +24,7 @@ const SearchBackground = ({ carouselImages }) => {
       {carouselImages?.map((image, index) => {
         return (
           <Carousel.Slide key={index}>
-            <Image height={"75vh"} src={Slider1} />
+            <Image height={matches600?"75vh":"50vh"} src={Slider1} />
           </Carousel.Slide>
         );
       })}
@@ -46,7 +44,7 @@ const SearchBackground = ({ carouselImages }) => {
           }}
         >
           <Text
-            size={matches600 ? "3vw" : "6vw"}
+            size={matches600 ? "3vw" : "5vw"}
             weight="bold"
             align="center"
             color="white"
@@ -62,7 +60,7 @@ const SearchBackground = ({ carouselImages }) => {
             align="center"
             color="white"
             style={{ fontVariant: "small-caps" }}
-            w={"50rem"}
+            w={matches600?"50rem":"20rem"}
             ml={"auto"}
             mr={"auto"}
           >
