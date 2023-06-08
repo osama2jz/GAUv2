@@ -27,7 +27,7 @@ const Testimonials = ({ carouselImages }) => {
           width: "1rem",
           height: "0.5rem",
           transition: "width 250ms ease",
-
+          backgroundColor:'rgb(0,0,0,0.4)',
           "&[data-active]": {
             width: "4rem",
           },
