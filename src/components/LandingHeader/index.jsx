@@ -20,10 +20,11 @@ export const LandingHeader = ({ opened, toggle }) => {
       style={{
         display: "flex",
         width: "100vw",
-        justifyContent: "space-between",
+        justifyContent: "space-around",
         alignItems: "center",
+        
       }}
-      p={"md"}
+      p={"sm"}
     >
       <Flex
         align={"center"}
@@ -36,15 +37,24 @@ export const LandingHeader = ({ opened, toggle }) => {
         </Text>
       </Flex>
       {isMobile && <Burger opened={opened} onClick={toggle} />}
-      <Flex gap={"md"} align={"center"} className={classes.navigationBar}>
+      <Flex gap={"lg"} align={"center"} className={classes.navigationBar}>
         <Link className={classes.link} to={routeNames.general.landing}>
           {translate("Home")}
+        </Link>
+        <Link className={classes.link} to={routeNames.general.landing}>
+          {translate("Services")}
+        </Link>
+        <Link className={classes.link} to={routeNames.general.aboutUs}>
+          {translate("About Us")}
         </Link>
         <Link className={classes.link} to={routeNames.general.donate}>
           {translate("Donations")}
         </Link>
-        <Link className={classes.link} to={routeNames.general.aboutUs}>
-          {translate("About Us")}
+        <Link className={classes.link} to={routeNames.general.landing}>
+          {translate("Our Partner")}
+        </Link>
+        <Link className={classes.link} to={routeNames.general.landing}>
+          {translate("Contact Us")}
         </Link>
         {!user?.role ? (
           <>

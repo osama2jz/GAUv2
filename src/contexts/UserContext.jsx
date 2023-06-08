@@ -15,7 +15,7 @@ export const UserProvider = ({ children }) => {
   );
   const [lang, setLang] = useState([]);
 
-  const value = { user, setUser, lang, translate };
+  const value = {lang, translate };
 
   function translate(value) {
     const lowerCaseValue = value?.toLowerCase();

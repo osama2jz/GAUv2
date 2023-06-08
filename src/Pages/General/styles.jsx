@@ -112,7 +112,8 @@ export const useStyles = createStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "cover",
-    backgroundImage: `url(${footer})`,
+    backgroundColor:"#327BBF",
+    // backgroundImage: `url(${footer})`,
     [`@media (max-width: 820px)`]: {
       flexDirection: "column",
       gap: "20px",
