@@ -1,10 +1,12 @@
 import { Outlet } from "react-router-dom";
-import {LandingHeader} from "../components/LandingHeader";
-import{ LandingFooter} from "../Pages/General/LandingFooter";
+import { useDisclosure } from '@mantine/hooks';
+import { LandingHeader } from "../components/LandingHeader";
+import { LandingFooter } from "../Pages/General/LandingFooter";
 const Layout = () => {
+  const [opened, { toggle }] = useDisclosure(false);
   return (
     <>
-      <LandingHeader />
+      <LandingHeader opened={opened} toggle={toggle} />
       <Outlet />
       <LandingFooter />
     </>
