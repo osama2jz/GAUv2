@@ -3,9 +3,12 @@ import { Container, Image, Indicator, Paper, Stack, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 // import Autoplay from "embla-carousel-autoplay";
 import Slider1 from "../../assets/icons/Component1.svg";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 const SearchBackground = ({ carouselImages }) => {
   const matches600 = useMediaQuery("(min-width: 600px)");
+  const {translate}=useContext(UserContext)
 
   // const autoplay = useRef(Autoplay({ delay: 10000 }));
 
@@ -50,9 +53,7 @@ const SearchBackground = ({ carouselImages }) => {
             color="white"
             style={{ fontVariant: "small-caps" }}
           >
-            <b className="fgColorF">"Empowering </b> Lives{", "}
-            {/* {!matches600 ? <br></br> : null}Used{" "} */}
-            <b className="fgColorF">Inspiring Change"</b>
+            <b className="fgColorF">{translate("Empowering Lives, Inspiring Change")}</b>
           </Text>
           <Text
             size={matches600 ? "1.5vw" : "3vw"}
@@ -64,8 +65,7 @@ const SearchBackground = ({ carouselImages }) => {
             ml={"auto"}
             mr={"auto"}
           >
-            Unlocking potential, transforming lives - our NGO is dedicated to
-            empowering individuals and communities
+            {translate("Unlocking potential, transforming lives - our NGO is dedicated to empowering individuals and communities")}
           </Text>
         </div>
       </Stack>

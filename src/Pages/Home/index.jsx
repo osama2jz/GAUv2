@@ -11,29 +11,41 @@ import Partner from "./Partner";
 import Projects from "./Projects";
 import Testimonials from "./Testimonials";
 import { useStyles } from "./styles";
+import s1 from "../../assets/icons/s1.png";
+import s2 from "../../assets/icons/s2.png";
+import s3 from "../../assets/icons/s3.png";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 const index = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
   const navigate = useNavigate();
-  const {classes}=useStyles()
+  const { classes } = useStyles();
+  const {translate}=useContext(UserContext)
   const data = [
     {
-      image:
-        "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "Best forests to visit in North America",
-      category: "nature",
+      image: s1,
+      title: "Collect Fund For Water & Food",
+      des: "We Providing Life's Essentials: Help us Collect Funds for Water and Food to Save Lives",
+      rating: "4.8",
+      work: "Help more than 50000 individuals",
+      branches: "15",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "Hawaii beaches review: better than you think",
-      category: "beach",
+      image: s2,
+      title: "Collect Fund For Medical",
+      des: "Support our Fundraising Campaign to Provide Access to Quality Medical Facilities",
+      rating: "4.8",
+      work: "Provide education to more than 35000 childs",
+      branches: "15",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "Mountains at night: 12 best locations to enjoy the view",
-      category: "nature",
+      image: s3,
+      title: "Collect Fund For Shelter",
+      des: "Contribute to our Fundraising Drive and Help Provide Shelter for the Homeless and Vulnerable",
+      rating: "4.8",
+      work: "Our NGO shelters over 1,000 families",
+      branches: "15",
     },
   ];
   return (
@@ -43,7 +55,7 @@ const index = () => {
       />
       {/* <Container w={"100%"} bg={"red"}> */}
       <Title align="center" size={"40px"} mt="xl">
-        Our Services
+        {translate("Our Services")}
       </Title>
       <Flex
         justify={"flex-end"}
@@ -52,7 +64,7 @@ const index = () => {
         onClick={() => navigate(routeNames.general.services)}
       >
         <Text color="#327BBF" fw={"bold"}>
-          Learn More
+          {translate("Learn More")}
         </Text>
         <ChevronsRight color="#327BBF" />
       </Flex>

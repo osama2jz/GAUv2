@@ -80,6 +80,8 @@ const ContactUs = () => {
           top={"50%"}
           left={"40%"}
           color="white"
+          style={{ borderBottom: "2px solid white" }}
+
         >
           {translate("Contact Us")}
         </Title>

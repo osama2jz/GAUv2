@@ -12,13 +12,10 @@ import {
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import aboutus from "../../assets/icons/aboutUsHeader.png";
-import education from "../../assets/education.svg";
+import Aboutus3 from "../../assets/icons/partner2.png";
 import Aboutus1 from "../../assets/icons/au1.png";
-import surgery from "../../assets/surgery.svg";
-import food from "../../assets/food.svg";
-import health from "../../assets/health.svg";
-import funding from "../../assets/funding.svg";
-import { Service } from "../General/Service";
+import Aboutus2 from "../../assets/icons/au2.png";
+
 import Projects from "../Home/Projects";
 
 const About = () => {
@@ -65,6 +62,8 @@ const About = () => {
             width: "100%",
             height: "100%",
             backgroundColor: "rgb(0,0,0,0.2)",
+        
+
           }}
         ></div>
         <Title
@@ -73,6 +72,8 @@ const About = () => {
           top={"50%"}
           left={"40%"}
           color="white"
+          style={{ borderBottom: "2px solid white" }}
+
         >
           About Us
         </Title>
@@ -94,7 +95,9 @@ const About = () => {
           </Grid.Col>
           <Grid.Col span={12} md={6} lg={6} p={"xl"}>
             <Stack>
-              <Text size={"20px"} mb={"-20px"}>About us</Text>
+              <Text size={"20px"} mb={"-20px"}>
+                About us
+              </Text>
               <Group>
                 <Title>Help is Our </Title>
                 <Text size={35} color="green">
@@ -161,7 +164,7 @@ const About = () => {
               w={matches600 ? "30rem" : "18rem"}
               h={matches600 ? "29rem" : "16rem"}
             >
-              <Image src={Aboutus1} height={425} width={500} alt="Norway" />
+              <Image src={Aboutus2} height={425} width={500} alt="Norway" />
             </Card>
             {/* </Stack> */}
           </Grid.Col>
@@ -179,13 +182,15 @@ const About = () => {
               w={matches600 ? "30rem" : "18rem"}
               h={matches600 ? "29rem" : "16rem"}
             >
-              <Image src={Aboutus1} height={425} width={450} alt="Norway" />
+              <Image src={Aboutus3} height={425} width={450} alt="Norway" />
             </Card>
             {/* </Stack> */}
           </Grid.Col>
           <Grid.Col span={12} md={6} lg={6} p={"xl"}>
             <Stack>
-              <Text size={"20px"}mb={"-15px"}>How GAU help Gypsies</Text>
+              <Text size={"20px"} mb={"-15px"}>
+                How GAU help Gypsies
+              </Text>
               <Group mb={"-10px"}>
                 <Title>Our </Title>
                 <Text size={35} color="green">
