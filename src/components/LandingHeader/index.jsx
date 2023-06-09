@@ -10,6 +10,7 @@ import { useStyles } from "./styles";
 
 export const LandingHeader = ({ opened, toggle }) => {
   const isMobile = useMediaQuery("(max-width: 820px)");
+
   const { user, translate } = useContext(UserContext);
   const { classes } = useStyles({ opened });
 
@@ -65,13 +66,19 @@ export const LandingHeader = ({ opened, toggle }) => {
         <Flex gap="md">
           <Button
             label={"Sign up"}
+            size={isMobile ? "xs" : "sm"}
             primary={true}
-            onClick={() => window.location.href = 'https://gauapp.es/auth/signup'}
+            onClick={() =>
+              (window.location.href = "https://gauapp.es/auth/signup")
+            }
           />
           <Button
+            size={isMobile ? "xs" : "sm"}
             label={"Log in"}
             primary={true}
-            onClick={() => window.location.href="https://gauapp.es/auth/login"}
+            onClick={() =>
+              (window.location.href = "https://gauapp.es/auth/login")
+            }
           />
         </Flex>
       ) : (
