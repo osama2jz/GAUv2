@@ -1,15 +1,12 @@
 import {
   Card,
-  Container,
-  Group,
-  Image,
-  Paper,
   Stack,
-  Text,
+  Text
 } from "@mantine/core";
-import { useStyles } from "./styles";
 import { useMediaQuery } from "@mantine/hooks";
+import { useStyles } from "./styles";
 
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import routeNames from "../../routes/routeNames";
 import { useNavigate } from "react-router-dom";
