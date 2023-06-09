@@ -13,9 +13,12 @@ import { useMediaQuery } from "@mantine/hooks";
 // import Autoplay from "embla-carousel-autoplay";
 import Slider1 from "../../assets/icons/Component1.svg";
 import TestimonialsBackGround from "../../assets/icons/Testimonial.jpg";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 const Testimonials = ({ carouselImages }) => {
   const matches600 = useMediaQuery("(min-width: 600px)");
+  const {translate}=useContext(UserContext)
 
   // const autoplay = useRef(Autoplay({ delay: 10000 }));
 
@@ -58,11 +61,11 @@ const Testimonials = ({ carouselImages }) => {
               >
                 <Text align="center" color="#327BBF" size={"xl"} mb={"md"}>
                   {" "}
-                  &lt;&nbsp;Testimonials&nbsp;&gt;{" "}
+                  &lt;&nbsp;{translate("Testimonials")}&nbsp;&gt;{" "}
                 </Text>
 
                 <Title align="center" mb={35}>
-                  Client Testimonials
+                  {translate("Client Testimonials")}
                 </Title>
                 <Group position="center">
                   <Avatar

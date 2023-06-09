@@ -3,9 +3,12 @@ import { useMediaQuery } from "@mantine/hooks";
 import aboutus from "../../assets/icons/aboutUsHeader.png";
 
 import Partner from "../Home/Partner";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 const About = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
+  const {translate}=useContext(UserContext)
 
   return (
     <>
@@ -15,6 +18,7 @@ const About = () => {
         m="0px"
         style={{
           backgroundImage: `url(${aboutus})`,
+          opacity:0.9,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           overflow: "hidden",
@@ -40,7 +44,7 @@ const About = () => {
           style={{ borderBottom: "2px solid white" }}
 
         >
-          Our Partner
+          {translate("Our Partner")}
         </Title>
       </Container>
       <Partner />

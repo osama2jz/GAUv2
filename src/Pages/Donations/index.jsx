@@ -18,9 +18,12 @@ import d4 from "../../assets/d4.svg";
 import { useForm } from "@mantine/form";
 import Button from "../../components/Button";
 import { useStyles } from "./styles";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 const Donations = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
+  const {translate}=useContext(UserContext)
   const { classes } = useStyles();
   const form = useForm({
     initialValues: {
@@ -33,11 +36,11 @@ const Donations = () => {
     },
 
     validate: {
-      firstName: (value) => (value?.length < 1 ? "Enter First Name" : null),
-      lastName: (value) => (value?.length < 1 ? "Enter Last Name" : null),
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Enter valid email"),
-      phoneNo: (value) => (value?.length < 1 ? "Enter Phone Number" : null),
-      amount: (value) => (value < 1 ? "Enter Amount" : null),
+      firstName: (value) => (value?.length < 1 ? translate("Enter First Name") : null),
+      lastName: (value) => (value?.length < 1 ? translate("Enter Last Name") : null),
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : translate("Enter valid email")),
+      phoneNo: (value) => (value?.length < 1 ? translate("Enter Phone Number") : null),
+      amount: (value) => (value < 1 ? translate("Enter Amount") : null),
     },
   });
 
@@ -73,7 +76,7 @@ const Donations = () => {
           color="white"
           style={{ borderBottom: "2px solid white" }}
         >
-          Donations
+          {translate("Donations")}
         </Title>
       </Container>
       <Flex
@@ -88,30 +91,23 @@ const Donations = () => {
       >
         <Stack spacing={"20px"} w={matches600 ? "45%" : "100%"}>
           <Title order={1} mt="0px">
-            Empower the Gypsy Community Donate and Make a Lasting Impact
+            {translate("Empower the Gypsy Community Donate and Make a Lasting Impact")}
           </Title>
           <Text>
-            Ignite hope. Unleash compassion. Support the Gypsy community. Your
-            donation breathes life into forgotten dreams, breaking chains of
-            marginalization. Together, we create a symphony of transformation,
-            painting a brighter future. Let love and understanding guide our
-            path, rewriting their story with unwavering kindness. Make an
-            indelible mark of empathy, for every heartfelt gift shapes their
-            lives.
+            {translate("Ignite hope. Unleash compassion. Support the Gypsy community. Your donation breathes life into forgotten dreams, breaking chains of marginalization. Together, we create a symphony of transformation, painting a brighter future. Let love and understanding guide our path, rewriting their story with unwavering kindness. Make an indelible mark of empathy, for every heartfelt gift shapes their lives")}.
           </Text>
           <List mt={"xl"}>
             <List.Item>
-              Your support celebrates the vibrant culture of the Gypsy people.
+              {translate("Your support celebrates the vibrant culture of the Gypsy people")}.
             </List.Item>
             <List.Item>
-              By amplifying their voices, you nurture their dreams for a better
-              future.
+              {translate("By amplifying their voices, you nurture their dreams for a better future")}.
             </List.Item>
             <List.Item>
-              Your generosity becomes a catalyst for positive change.
+              {translate("Your generosity becomes a catalyst for positive change")}.
             </List.Item>
             <List.Item>
-              Together, we can make a profound difference in their lives.
+              {translate("Together, we can make a profound difference in their lives")}.
             </List.Item>
           </List>
         </Stack>
@@ -130,37 +126,37 @@ const Donations = () => {
       <Grid p={"xl"} justify="space-evenly">
         <Grid.Col md={4}>
           <form className={classes.form} onSubmit={form.onSubmit(() => {})}>
-            <Title align="center">Make A Donation</Title>
+            <Title align="center">{translate("Make A Donation")}</Title>
             <TextInput
-              placeholder="First Name"
+              placeholder={translate("First Name")}
               size="md"
               {...form.getInputProps("firstName")}
             />
             <TextInput
               size="md"
-              placeholder="Last Name"
+              placeholder={translate("Last Name")}
               {...form.getInputProps("lastName")}
             />
             <TextInput
-              placeholder="Email"
+              placeholder={translate("Email")}
               size="md"
               type="email"
               {...form.getInputProps("email")}
             />
             <TextInput
               size="md"
-              placeholder="Phone Number"
+              placeholder={translate("Phone Number")}
               type="tel"
               {...form.getInputProps("phoneNo")}
             />
             <TextInput
-              placeholder="Amount"
+              placeholder={translate("Amount")}
               size="md"
               type="number"
               {...form.getInputProps("amount")}
             />
             <TextInput
-              placeholder="Comments"
+              placeholder={translate("Comments")}
               size="md"
               {...form.getInputProps("comments")}
             />

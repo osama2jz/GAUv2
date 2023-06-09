@@ -8,27 +8,38 @@ import food from "../../assets/food.svg";
 import health from "../../assets/health.svg";
 import funding from "../../assets/funding.svg";
 import { Service } from "../General/Service";
-
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
+import s1 from "../../assets/icons/s1.png";
+import s2 from "../../assets/icons/s2.png";
+import s3 from "../../assets/icons/s3.png";
 const Services = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
+  const { translate } = useContext(UserContext);
   const data = [
     {
-      image:
-        "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "Best forests to visit in North America",
-      category: "nature",
+      image: s1,
+      title: "Collect Fund For Water & Food",
+      des: "We Providing Life's Essentials: Help us Collect Funds for Water and Food to Save Lives",
+      rating: "4.8",
+      work: "Help more than 50000 individuals",
+      branches: "15",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "Hawaii beaches review: better than you think",
-      category: "beach",
+      image: s2,
+      title: "Collect Fund For Medical",
+      des: "Support our Fundraising Campaign to Provide Access to Quality Medical Facilities",
+      rating: "4.8",
+      work: "Provide education to more than 35000 childs",
+      branches: "15",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "Mountains at night: 12 best locations to enjoy the view",
-      category: "nature",
+      image: s3,
+      title: "Collect Fund For Shelter",
+      des: "Contribute to our Fundraising Drive and Help Provide Shelter for the Homeless and Vulnerable",
+      rating: "4.8",
+      work: "Our NGO shelters over 1,000 families",
+      branches: "15",
     },
   ];
   return (
@@ -43,6 +54,7 @@ const Services = () => {
           backgroundRepeat: "no-repeat",
           overflow: "hidden",
           position: "relative",
+          filter: "brightness(0.8)",
         }}
         h={matches600 ? "500px" : "300px"}
         mb="xl"
@@ -56,6 +68,7 @@ const Services = () => {
           }}
         ></div>
         <Title
+        zIndex={5}
           order={1}
           pos={"absolute"}
           top={"50%"}
@@ -63,7 +76,7 @@ const Services = () => {
           color="white"
           style={{ borderBottom: "2px solid white" }}
         >
-          Services
+          {translate("Services")}
         </Title>
       </Container>
       <Flex
@@ -85,42 +98,40 @@ const Services = () => {
         />
         <Stack spacing={"0px"} w={matches600 ? "45%" : "100%"}>
           <Text mt="lg" color="green">
-            WE PROVIDE
+            {"WE PROVIDE"}
           </Text>
           <Title order={1} mt="0px">
-            Transforming Lives, One Act of Kindness at a Time
+            {"Transforming Lives, One Act of Kindness at a Time"}
           </Title>
           <Text>
-            Building a network of compassion, resilience, and sustainable
-            solutions to uplift vulnerable communities and promote lasting
-            positive change. Dedicated to empowering individuals, bridging
-            divides, and building a world where everyone has equal opportunities
-            to thrive.
+            {translate(
+              "Building a network of compassion, resilience, and sustainable solutions to uplift vulnerable communities and promote lasting positive change. Dedicated to empowering individuals, bridging divides, and building a world where everyone has equal opportunities to thrive."
+            )}
           </Text>
           <SimpleGrid cols={2} mt="xl">
             <Flex align={"center"} gap="md">
               <img src={education} />
-              <Text>Education</Text>
+              <Text>{translate("Education")}</Text>
             </Flex>
             <Flex align={"center"} gap="md">
               <img src={surgery} />
-              <Text>Surgery</Text>
+              <Text>{translate("Surgery")}</Text>
             </Flex>
             <Flex align={"center"} gap="md">
               <img src={health} />
-              <Text>Health</Text>
+              <Text>{translate("Health")}</Text>
             </Flex>
             <Flex align={"center"} gap="md">
               <img src={food} />
-              <Text>Food</Text>
+              <Text>{translate("Food")}</Text>
             </Flex>
             <Flex align={"center"} gap="md">
               <img src={shelter} />
-              <Text>Shelter</Text>
+              <Text>{translate("Shelter")}</Text>
             </Flex>
             <Flex align={"center"} gap="md">
               <img src={funding} />
-              <Text>Funding</Text>
+              <Text>{translate("Funding")}</Text>
             </Flex>
           </SimpleGrid>
         </Stack>
