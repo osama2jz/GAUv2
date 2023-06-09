@@ -12,7 +12,7 @@ import {
 import { UserContext } from "../../contexts/UserContext";
 import { useStyles } from "./styles";
 import { Link } from "react-router-dom";
-import routeNames from "../../Routes/routeNames";
+import routeNames from "../../routes/routeNames";
 
 export const LandingFooter = () => {
   const { classes } = useStyles();

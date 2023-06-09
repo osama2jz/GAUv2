@@ -10,7 +10,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router";
 import Button from "../../Components/Button";
 import { LandingHeader } from "../../Components/LandingHeader";
-import routeNames from "../../Routes/routeNames";
+import routeNames from "../../routes/routeNames";
 import landingFG from "../../assets/landingFG.svg";
 import mem from "../../assets/mem.svg";
 import { UserContext } from "../../contexts/UserContext";

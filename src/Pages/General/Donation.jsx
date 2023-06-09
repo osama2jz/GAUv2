@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "../../Components/Button";
 import InputField from "../../Components/InputField";
 import { LandingHeader } from "../../Components/LandingHeader";
-import routeNames from "../../Routes/routeNames";
+import routeNames from "../../routes/routeNames";
 import donate from "../../assets/donate.jpg";
 import { UserContext } from "../../contexts/UserContext";
 import { LandingFooter } from "./LandingFooter";
