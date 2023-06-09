@@ -2,7 +2,7 @@ import { Flex, Grid, Group, Text, Title } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { useNavigate } from "react-router-dom";
 import { ChevronsRight } from "tabler-icons-react";
-import videoBG from "../../assets/videoBg.svg";
+import videoBG from "../../assets/videoBG.svg";
 import routeNames from "../../routes/routeNames";
 import { useStyles } from "./styles";
 import { useContext } from "react";
