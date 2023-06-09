@@ -53,7 +53,7 @@ const Partner = () => {
           <Text align="justify" size={"lg"}>
            {translate("Join us in our mission to create equal opportunities and a brighter future for the Gypsy community in Spain. Donate today and be a part of this transformative journey of empowerment and social change. Together, we can make a significant difference in the lives of Gypsy individuals and families. By partnering with GAU, you will have the opportunity to contribute your expertise, resources, and network to support our programs and initiatives. Let's collaborate to break down barriers, fight discrimination, and create a more inclusive society. Contact us today to explore partnership opportunities and together, we can build a brighter future for the Gypsy community in Spain.")}
           </Text>
-          <Button label={"Become a Partner"} primary={true} size="md" />
+          <Button label={"Become a Partner"} primary={true} size="md" onClick={()=>window.location.href="https://gauapp.es/auth/signup-professional"} />
         </Group>
       </Grid.Col>
     </Grid>

@@ -66,12 +66,12 @@ export const LandingHeader = ({ opened, toggle }) => {
           <Button
             label={"Sign up"}
             primary={true}
-            onClick={() => navigate(routeNames.general.signup)}
+            onClick={() => window.location.href = 'https://gauapp.es/auth/signup'}
           />
           <Button
             label={"Log in"}
             primary={true}
-            onClick={() => navigate(routeNames.general.login)}
+            onClick={() => window.location.href="https://gauapp.es/auth/login"}
           />
         </Flex>
       ) : (
