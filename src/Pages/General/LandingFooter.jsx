@@ -24,7 +24,7 @@ export const LandingFooter = () => {
         direction="column"
         align={"center"}
         gap={"md"}
-        w={isMobile ? "100%" : "60%"}
+        w={isMobile ? "100%" : "30%"}
       >
         <Flex gap={"lg"}>
           <Text>GAU</Text>
@@ -38,21 +38,27 @@ export const LandingFooter = () => {
             {translate("Home")}
           </Link>
           <Divider orientation="vertical" />
-          <Link className={classes.link} to={routeNames.general.donate}>
-            {translate("Donations")}
+          <Link className={classes.link} to={routeNames.general.services}>
+            {translate("Services")}
           </Link>
           <Divider orientation="vertical" />
           <Link className={classes.link} to={routeNames.general.aboutUs}>
             {translate("About Us")}
           </Link>
           <Divider orientation="vertical" />
-          <Link className={classes.link} to={routeNames.general.aboutUs}>
-            {translate("Sign Up")}
+
+          <Link className={classes.link} to={routeNames.general.donate}>
+            {translate("Donations")}
           </Link>
-          <Divider orientation="vertical" />
-          <Link className={classes.link} to={routeNames.general.aboutUs}>
-            {translate("Log In")}
-          </Link>
+          {/* <Divider orientation="vertical" />
+          <Link className={classes.link} to={routeNames.general.partner}>
+            {translate("Our Partner")}
+          </Link> */}
+          
+          {/* <Divider orientation="vertical" />
+          <Link className={classes.link} to={routeNames.general.contactUs}>
+            {translate("Contact Us")}
+          </Link> */}
         </Flex>
         <Text fz="sm" align="center">
           {translate(

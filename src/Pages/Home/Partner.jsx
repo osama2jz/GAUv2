@@ -27,8 +27,10 @@ const Partner = () => {
             shadow="md"
             padding="md"
             withBorder
-            w={matches600 ? "25rem" : "18rem"}
-            h={matches600 ? "24rem" : "16rem"}
+            w={matches600 ? "25rem" : "13rem"}
+            h={matches600 ? "24rem" : "13rem"}
+            ml={matches600 ? "" : "-20px"}
+
           >
             <Image src={Pic2} height={350} alt="Norway" />
           </Card>
@@ -36,9 +38,9 @@ const Partner = () => {
             shadow="md"
             padding="md"
             withBorder
-            w={matches600 ? "25rem" : "18rem"}
-            h={matches600 ? "24rem" : "16rem"}
-            ml={matches600 ? "160px" : "120px"}
+            w={matches600 ? "25rem" : "13rem"}
+            h={matches600 ? "24rem" : "13rem"}
+            ml={matches600 ? "160px" : "90px"}
             mt={matches600 ? "-300px" : "-200px"}
           >
             <Image src={Pic1} height={350} alt="Norway" />

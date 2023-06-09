@@ -80,7 +80,7 @@ const About = () => {
                 {translate("About us")}
               </Text>
               <Group>
-                <Title>Help is Our </Title>
+                <Title size={"h2"}>{translate("Help is Our")} </Title>
                 <Text size={35} color="green">
                   {" "}
                   {translate("Main Goal")}
@@ -152,7 +152,7 @@ const About = () => {
                 {translate("How GAU help Gypsies")}
               </Text>
               <Group mb={"-10px"}>
-                <Title>Our </Title>
+                <Title>{translate("Our")} </Title>
                 <Text size={35} color="green">
                   {" "}
                   {translate("Main Services")}

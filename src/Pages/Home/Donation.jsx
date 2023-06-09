@@ -43,11 +43,11 @@ const Donation = () => {
               <b className="fgColorF">{translate("Make a Donation")}{" "} </b>
             </Text>
             <Text
-              size={matches600 ? "1.2vw" : "2.4vw"}
+              size={matches600 ? "1.2vw" : "2.5vw"}
               // weight="bold"
               align="center"
               color="white"
-              w={matches600 ? "50rem" : "30rem"}
+              w={matches600 ? "50rem" : "20rem"}
               ml={"auto"}
               mr={"auto"}
             >
