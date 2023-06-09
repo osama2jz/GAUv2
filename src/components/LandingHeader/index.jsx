@@ -2,7 +2,7 @@ import { Burger, Container, Flex, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import routeNames from "../../Routes/routeNames";
+import routeNames from "../../routes/routeNames";
 import logo from "../../assets/Gau.png";
 import { UserContext } from "../../contexts/UserContext";
 import Button from "../Button";
