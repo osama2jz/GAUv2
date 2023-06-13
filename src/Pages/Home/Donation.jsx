@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import routeNames from "../../routes/routeNames";
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 const Donation = () => {
@@ -14,6 +14,13 @@ const Donation = () => {
   const { translate } = useContext(UserContext);
   const navigate = useNavigate();
   const matches600 = useMediaQuery("(min-width: 600px)");
+  useEffect(() => {
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <Card withBorder className={classes.donation}>

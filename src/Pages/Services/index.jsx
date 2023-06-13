@@ -42,9 +42,13 @@ const Services = () => {
       branches: "15",
     },
   ];
-  useEffect(()=>{
-    window.scroll(0,0)
-  },[])
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <Container
@@ -71,7 +75,7 @@ const Services = () => {
           }}
         ></div>
         <Title
-        zIndex={5}
+          zIndex={5}
           order={1}
           pos={"absolute"}
           top={"50%"}

@@ -14,7 +14,7 @@ import { useStyles } from "./styles";
 import s1 from "../../assets/icons/s1.png";
 import s2 from "../../assets/icons/s2.png";
 import s3 from "../../assets/icons/s3.png";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 const index = () => {
@@ -48,6 +48,13 @@ const index = () => {
       branches: "15",
     },
   ];
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <Carasoul

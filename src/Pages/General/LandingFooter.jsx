@@ -34,7 +34,7 @@ export const LandingFooter = () => {
           <BrandInstagram />
         </Flex>
         <Flex gap={"md"} align={"center"} className={classes.navigationBar}>
-          <Link className={classes.link} to={routeNames.general.landing} onClick={()=>window.scroll(0,0)}>
+          <Link className={classes.link} to={routeNames.general.landing}>
             {translate("Home")}
           </Link>
           <Divider orientation="vertical" />
@@ -54,7 +54,7 @@ export const LandingFooter = () => {
           <Link className={classes.link} to={routeNames.general.partner}>
             {translate("Our Partner")}
           </Link> */}
-          
+
           {/* <Divider orientation="vertical" />
           <Link className={classes.link} to={routeNames.general.contactUs}>
             {translate("Contact Us")}
