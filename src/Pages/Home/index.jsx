@@ -21,7 +21,7 @@ const index = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
   const navigate = useNavigate();
   const { classes } = useStyles();
-  const {translate}=useContext(UserContext)
+  const { translate } = useContext(UserContext);
   const data = [
     {
       image: s1,
@@ -70,17 +70,14 @@ const index = () => {
       </Flex>
       <Flex
         align={"center"}
-        justify="center"
+        justify="space-between"
         m={"md"}
         p={"lg"}
         direction={matches600 ? "row" : "column"}
         gap={"sm"}
-        // bg={"red"}
       >
         {data.map((item, index) => (
-          // <Grid.Col md={"auto"} key={index}>
           <Service data={item} key={index} />
-          // </Grid.Col>
         ))}
       </Flex>
       <AboutUs />

@@ -20,8 +20,8 @@ const Partner = () => {
   const {translate}=useContext(UserContext)
 
   return (
-    <Grid mt={"xl"} p={"xl"}>
-      <Grid.Col span={12} md={6} lg={5.5}>
+    <Grid mt={"xl"} p={"xl"}m="0px">
+      <Grid.Col md={6} lg={5.5}>
         <Stack p={"xl"}>
           <Card
             shadow="md"
@@ -47,9 +47,9 @@ const Partner = () => {
           </Card>
         </Stack>
       </Grid.Col>
-      <Grid.Col span={12} md={6} lg={5} p={"xl"}>
+      <Grid.Col  md={6} lg={5} p={"xl"}>
         <Group>
-          <Title align="center" size={"40px"}>
+          <Title align="center" size={"30px"}>
             {translate("Become Our Partner")}
           </Title>
           <Text align="justify" size={"lg"}>
