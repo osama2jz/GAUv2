@@ -105,10 +105,10 @@ const Services = () => {
         />
         <Stack spacing={"0px"} w={matches600 ? "45%" : "100%"}>
           <Text mt="lg" color="green">
-            {"WE PROVIDE"}
+            {translate("WE PROVIDE")}
           </Text>
           <Title order={1} mt="0px">
-            {"Transforming Lives, One Act of Kindness at a Time"}
+            {translate("Transforming Lives, One Act of Kindness at a Time")}
           </Title>
           <Text>
             {translate(
