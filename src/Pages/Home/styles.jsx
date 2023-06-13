@@ -11,7 +11,6 @@ export const useStyles = createStyles((theme) => ({
     height: "330px",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-   
   },
   projects: {
     backgroundImage: `url(${donation})`,
@@ -40,7 +39,7 @@ export const useStyles = createStyles((theme) => ({
   projectsDiv: {
     display: "flex",
     alignItems: "center",
-    justifyContent:"space-between",
+    justifyContent: "space-between",
     flexDirection: "column",
     gap: "5px",
     border: "2px solid white",

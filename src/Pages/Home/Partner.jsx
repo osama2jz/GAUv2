@@ -36,7 +36,7 @@ const Partner = () => {
             ml={matches600 ? "" : "-20px"}
 
           >
-            <Image src={Pic2} height={"320px"} alt="Norway" />
+            <Image src={Pic2} height={"fit-content"} alt="Norway" />
           </Card>
           <Card
             shadow="md"
@@ -44,14 +44,14 @@ const Partner = () => {
             withBorder
             // w={matches600 ? "350px" : "300px"}
             // h={matches600 ? "350px" : "250px"}
-            ml={matches600 ? "160px" : "90px"}
+            ml={matches600 ? "160px" : "50px"}
             mt={matches600 ? "-300px" : "-200px"}
             style={{
               maxHeight:"fit-content",
               maxWidth:"fit-content"
             }}
           >
-            <Image src={Pic1} height={"320px"} alt="Norway" />
+            <Image src={Pic1} height={matches600 ?"320px":"200px"} width={matches600 ?"300px":"200px"} alt="Norway" />
           </Card>
         </Stack>
       </Grid.Col>

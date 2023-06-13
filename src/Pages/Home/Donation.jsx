@@ -28,6 +28,7 @@ const Donation = () => {
           style={{ position: "absolute", height: "100%", width: "100%" }}
           align="center"
           justify={"center"}
+          
         >
           <div
             style={{
@@ -36,7 +37,7 @@ const Donation = () => {
             }}
           >
             <Text
-              size={"22px"}
+              size={"25px"}
               weight="bold"
               align="center"
               color="white"
@@ -45,7 +46,7 @@ const Donation = () => {
               <b className="fgColorF">{translate("Make a Donation")} </b>
             </Text>
             <Text
-              size={"16px"}
+              size={"15px"}
               // weight="bold"
               align="center"
               color="white"
@@ -61,8 +62,9 @@ const Donation = () => {
           <Button
             label="Donate now"
             primary={true}
-            size={matches600 ? "lg" : "md"}
+            size={matches600 ? "lg" : "sm"}
             onClick={() => navigate(routeNames.general.donate)}
+           
           />
         </Stack>
       </Card>

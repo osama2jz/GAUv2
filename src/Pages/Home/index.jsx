@@ -67,6 +67,7 @@ const index = () => {
       <Flex
         justify={"flex-end"}
         m={"md"}
+       
         className={classes.more}
         onClick={() => navigate(routeNames.general.services)}
       >
