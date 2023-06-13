@@ -22,7 +22,6 @@ export const Service = ({ data }) => {
   const { translate } = useContext(UserContext);
   const isMobile = useMediaQuery("(min-width: 600px)");
   return (
-    <Container >
       <Card
         shadow="sm"
         padding="lg"
@@ -31,39 +30,34 @@ export const Service = ({ data }) => {
         w={isMobile?"400px":"320px"}
         h={isMobile?"450px":"460px"}
       >
-        {/* <Card.Section> */}
-        <Image
-          src={data?.image}
-          height={220}
-          alt="Norway"
-        />
-        {/* </Card.Section> */}
+        <Image src={data?.image} height={"220px"} alt="Norway" />
+
         <h3>{translate(data?.title)}</h3>
 
-        <Text size={isMobile?"md":"sm"} mt={"-10px"}>
-        {translate(data?.des)}
+        <Text size={isMobile ? "md" : "sm"} mt={"-10px"}>
+          {translate(data?.des)}
         </Text>
 
         <Group mt={"md"}>
           <img src={star} height={"20px"} width={"20px"} />
-          <Text size={isMobile?"sm":"xs"} color="dimmed">
+          <Text size={isMobile ? "sm" : "xs"} color="dimmed">
             {`${data?.rating} (100+ reviews)`}
           </Text>
         </Group>
         <Group spacing={"md"}>
           <img src={profile} height={"20px"} width={"20px"} />
 
-          <Text size={isMobile?"sm":"xs"} color="dimmed">
+          <Text size={isMobile ? "sm" : "xs"} color="dimmed">
             {translate(data?.work)}
           </Text>
         </Group>
         <Group>
           <Star size={18} strokeWidth={2} color={"#d2ca79"} />
-          <Text size={isMobile?"sm":"xs"} color="dimmed">
-           {`${data?.branches} ${translate("Branches")}`}
+          <Text size={isMobile ? "sm" : "xs"} color="dimmed">
+            {`${data?.branches} ${translate("Branches")}`}
           </Text>
         </Group>
       </Card>
-    </Container>
+    // </Container>
   );
 };

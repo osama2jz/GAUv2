@@ -17,13 +17,15 @@ import Aboutus1 from "../../assets/icons/au1.png";
 import Aboutus2 from "../../assets/icons/au2.png";
 
 import Projects from "../Home/Projects";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 const About = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
   const {translate}=useContext(UserContext)
-
+  useEffect(()=>{
+    window.scroll(0,0)
+  },[])
   return (
     <>
       <Container

@@ -72,8 +72,10 @@ const index = () => {
         align={"center"}
         justify="center"
         m={"md"}
+        p={"lg"}
         direction={matches600 ? "row" : "column"}
         gap={"sm"}
+        // bg={"red"}
       >
         {data.map((item, index) => (
           // <Grid.Col md={"auto"} key={index}>

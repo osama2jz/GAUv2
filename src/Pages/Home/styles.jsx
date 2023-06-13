@@ -11,6 +11,7 @@ export const useStyles = createStyles((theme) => ({
     height: "330px",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+   
   },
   projects: {
     backgroundImage: `url(${donation})`,
