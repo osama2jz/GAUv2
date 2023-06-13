@@ -28,36 +28,38 @@ export const Service = ({ data }) => {
         // radius="md"
         withBorder
         w={isMobile?"400px":"320px"}
-        // h={isMobile?"450px":"460px"}
-        style={{
-          maxHeight:"fit-content"
-        }}
+        h={isMobile?"450px":"460px"}
+        // style={{
+        //   maxHeight:"fit-content"
+        // }}
         
       >
         <Image src={data?.image} height={"220px"} alt="Norway" />
 
-        <h3>{translate(data?.title)}</h3>
-
-        <Text size={isMobile ? "md" : "sm"} mt={"-10px"}>
+        {/* <h3>{translate(data?.title)}</h3> */}
+        <Text size={isMobile ? "18px" : "16px"} fw={"bold"} mb={"md"} mt={"sm"}>
+        {translate(data?.title)}
+        </Text>
+        <Text size={isMobile ? "14px" : "12px"} mt={"-10px"}>
           {translate(data?.des)}
         </Text>
 
         <Group mt={"md"}>
           <img src={star} height={"20px"} width={"20px"} />
-          <Text size={isMobile ? "sm" : "xs"} color="dimmed">
+          <Text size={"14px"} color="dimmed">
             {`${data?.rating} (100+ reviews)`}
           </Text>
         </Group>
         <Group spacing={"md"}>
           <img src={profile} height={"20px"} width={"20px"} />
 
-          <Text size={isMobile ? "sm" : "xs"} color="dimmed">
+          <Text size={"14px"} color="dimmed">
             {translate(data?.work)}
           </Text>
         </Group>
         <Group>
           <Star size={18} strokeWidth={2} color={"#d2ca79"} />
-          <Text size={isMobile ? "sm" : "xs"} color="dimmed">
+          <Text size={"14px"} color="dimmed">
             {`${data?.branches} ${translate("Branches")}`}
           </Text>
         </Group>
