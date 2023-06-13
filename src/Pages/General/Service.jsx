@@ -34,7 +34,7 @@ export const Service = ({ data }) => {
         // }}
         
       >
-        <Image src={data?.image} height={"220px"} alt="Norway" />
+        <Image src={data?.image} width={"100%"} alt="Norway" />
 
         {/* <h3>{translate(data?.title)}</h3> */}
         <Text size={isMobile ? "18px" : "16px"} fw={"bold"} mb={"md"} mt={"sm"}>
