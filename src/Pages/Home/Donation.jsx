@@ -54,7 +54,7 @@ const Donation = () => {
               mr={"auto"}
             >
               {
-                "Your donation can empower the Gypsy community in Spain. Give today and make a lasting impact. Your contribution will directly support our efforts to empower and uplift Gypsy individuals and families. With your generous donation, we can provide education, healthcare, and social support programs tailored to their specific needs"
+                translate("Your donation can empower the Gypsy community in Spain. Give today and make a lasting impact. Your contribution will directly support our efforts to empower and uplift Gypsy individuals and families. With your generous donation, we can provide education, healthcare, and social support programs tailored to their specific needs")
               }
             </Text>
           </div>

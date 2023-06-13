@@ -22,28 +22,36 @@ const Partner = () => {
   return (
     <Grid mt={"xl"} p={"xl"}m="0px">
       <Grid.Col md={6} lg={5.5}>
-        <Stack p={"xl"}>
+        <Stack p={"xl"} m={"10px"}>
           <Card
             shadow="md"
             padding="md"
             withBorder
-            w={matches600 ? "25rem" : "13rem"}
-            h={matches600 ? "24rem" : "13rem"}
+            // w={matches600 ? "350px" : "13rem"}
+            // h={matches600 ? "350px" : "13rem"}
+            style={{
+              maxHeight:"fit-content",
+              maxWidth:"fit-content"
+            }}
             ml={matches600 ? "" : "-20px"}
 
           >
-            <Image src={Pic2} height={350} alt="Norway" />
+            <Image src={Pic2} height={"320px"} alt="Norway" />
           </Card>
           <Card
             shadow="md"
             padding="md"
             withBorder
-            w={matches600 ? "25rem" : "13rem"}
-            h={matches600 ? "24rem" : "13rem"}
+            // w={matches600 ? "350px" : "300px"}
+            // h={matches600 ? "350px" : "250px"}
             ml={matches600 ? "160px" : "90px"}
             mt={matches600 ? "-300px" : "-200px"}
+            style={{
+              maxHeight:"fit-content",
+              maxWidth:"fit-content"
+            }}
           >
-            <Image src={Pic1} height={350} alt="Norway" />
+            <Image src={Pic1} height={"320px"} alt="Norway" />
           </Card>
         </Stack>
       </Grid.Col>

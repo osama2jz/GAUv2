@@ -28,7 +28,11 @@ export const Service = ({ data }) => {
         // radius="md"
         withBorder
         w={isMobile?"400px":"320px"}
-        h={isMobile?"450px":"460px"}
+        // h={isMobile?"450px":"460px"}
+        style={{
+          maxHeight:"fit-content"
+        }}
+        
       >
         <Image src={data?.image} height={"220px"} alt="Norway" />
 

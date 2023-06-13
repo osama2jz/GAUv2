@@ -25,7 +25,11 @@ const Donations = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
   const { translate } = useContext(UserContext);
   useEffect(() => {
-    window.scroll(0, 0);
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   }, []);
   const { classes } = useStyles();
   const form = useForm({

@@ -34,20 +34,56 @@ export const LandingFooter = () => {
           <BrandInstagram />
         </Flex>
         <Flex gap={"md"} align={"center"} className={classes.navigationBar}>
-          <Link className={classes.link} to={routeNames.general.landing}>
+          <Link
+            className={classes.link}
+            to={routeNames.general.landing}
+            onClick={() =>
+              window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+              })
+            }
+          >
             {translate("Home")}
           </Link>
           <Divider orientation="vertical" />
-          <Link className={classes.link} to={routeNames.general.services}>
+          <Link
+            className={classes.link}
+            to={routeNames.general.services}
+            onClick={() =>
+              window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+              })
+            }
+          >
             {translate("Services")}
           </Link>
           <Divider orientation="vertical" />
-          <Link className={classes.link} to={routeNames.general.aboutUs}>
+          <Link
+            className={classes.link}
+            to={routeNames.general.aboutUs}
+            onClick={() =>
+              window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+              })
+            }
+          >
             {translate("About Us")}
           </Link>
           <Divider orientation="vertical" />
 
-          <Link className={classes.link} to={routeNames.general.donate}>
+          <Link className={classes.link} to={routeNames.general.donate} onClick={() =>
+              window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+              })
+            }>
             {translate("Donations")}
           </Link>
           {/* <Divider orientation="vertical" />
