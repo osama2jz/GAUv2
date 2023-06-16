@@ -10,17 +10,17 @@ import {
   Title,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-// import Autoplay from "embla-carousel-autoplay";
+import Autoplay from "embla-carousel-autoplay";
 import Slider1 from "../../assets/icons/Component1.svg";
 import TestimonialsBackGround from "../../assets/icons/Testimonial.jpg";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 const Testimonials = ({ carouselImages }) => {
   const matches600 = useMediaQuery("(min-width: 600px)");
-  const {translate}=useContext(UserContext)
+  const { translate } = useContext(UserContext);
 
-  // const autoplay = useRef(Autoplay({ delay: 10000 }));
+  const autoplay = useRef(Autoplay({ delay: 4000 }));
 
   const searchBackgroundCarousel = (
     <Carousel
@@ -30,7 +30,7 @@ const Testimonials = ({ carouselImages }) => {
           width: "1rem",
           height: "0.5rem",
           transition: "width 250ms ease",
-          backgroundColor:'rgb(0,0,0,0.4)',
+          backgroundColor: "rgb(0,0,0,0.4)",
           "&[data-active]": {
             width: "4rem",
           },
@@ -43,7 +43,9 @@ const Testimonials = ({ carouselImages }) => {
       // orientation="vertical"
       draggable={false}
       withControls={false}
-      // plugins={[autoplay.current]}
+      plugins={[autoplay.current]}
+      onMouseEnter={autoplay.current.stop}
+      onMouseLeave={autoplay.current.reset}
     >
       {carouselImages?.map((image, index) => {
         return (

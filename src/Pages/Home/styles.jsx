@@ -1,16 +1,18 @@
-import { createStyles } from "@mantine/core";
-import landingBg from "../../assets/landingBg.svg";
-import g2 from "../../assets/g2.svg";
-import footer from "../../assets/landingFooter.svg";
+import { createStyles, keyframes } from "@mantine/core";
 import donation from "../../assets/icons/Component1.svg";
-import partner from "../../assets/icons/partner.png";
-
-export const useStyles = createStyles((theme) => ({
+export const bigToSmall = keyframes({
+  from: { transform: "scale(1.5)", margin: "50px" },
+  to: { transform: "scale(1)", margin: "0px" },
+});
+export const useStyles = createStyles((theme, props) => ({
   donation: {
     backgroundImage: `url(${donation})`,
     height: "330px",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+  },
+  animation: {
+    animation: props?.animate ? `${bigToSmall} 1s ease-in-out` : "",
   },
   projects: {
     backgroundImage: `url(${donation})`,

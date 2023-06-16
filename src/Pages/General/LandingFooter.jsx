@@ -50,15 +50,6 @@ export const LandingFooter = () => {
           <Link className={classes.link} to={routeNames.general.donate}>
             {translate("Donations")}
           </Link>
-          {/* <Divider orientation="vertical" />
-          <Link className={classes.link} to={routeNames.general.partner}>
-            {translate("Our Partner")}
-          </Link> */}
-          
-          {/* <Divider orientation="vertical" />
-          <Link className={classes.link} to={routeNames.general.contactUs}>
-            {translate("Contact Us")}
-          </Link> */}
         </Flex>
         <Text fz="sm" align="center">
           {translate(

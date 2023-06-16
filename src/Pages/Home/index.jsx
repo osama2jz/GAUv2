@@ -14,14 +14,18 @@ import { useStyles } from "./styles";
 import s1 from "../../assets/icons/s1.png";
 import s2 from "../../assets/icons/s2.png";
 import s3 from "../../assets/icons/s3.png";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { UserContext } from "../../contexts/UserContext";
+import { Carousel } from "@mantine/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const index = () => {
-  const matches600 = useMediaQuery("(min-width: 600px)");
   const navigate = useNavigate();
   const { classes } = useStyles();
-  const {translate}=useContext(UserContext)
+  const { translate } = useContext(UserContext);
+
+  const autoplay = useRef(Autoplay({ delay: 3000 }));
+
   const data = [
     {
       image: s1,
@@ -47,6 +51,14 @@ const index = () => {
       work: "Our NGO shelters over 1,000 families",
       branches: "15",
     },
+    {
+      image: s1,
+      title: "Collect Fund For Water & Food",
+      des: "We Providing Life's Essentials: Help us Collect Funds for Water and Food to Save Lives",
+      rating: "4.8",
+      work: "Help more than 50000 individuals",
+      branches: "15",
+    },
   ];
   return (
     <>
@@ -68,19 +80,20 @@ const index = () => {
         </Text>
         <ChevronsRight color="#327BBF" />
       </Flex>
-      <Flex
-        align={"center"}
-        justify="center"
-        m={"md"}
-        direction={matches600 ? "row" : "column"}
-        gap={"sm"}
+      <Carousel
+        slideSize={"33.33%"}
+        align={"start"}
+        slidesToScroll={3}
+        plugins={[autoplay.current]}
+        onMouseEnter={autoplay.current.stop}
+        onMouseLeave={autoplay.current.reset}
       >
         {data.map((item, index) => (
-          // <Grid.Col md={"auto"} key={index}>
-          <Service data={item} key={index} />
-          // </Grid.Col>
+          <Carousel.Slide key={index}>
+            <Service data={item} key={index} />
+          </Carousel.Slide>
         ))}
-      </Flex>
+      </Carousel>
       <AboutUs />
       <Donation />
       <Partner />
