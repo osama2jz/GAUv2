@@ -14,7 +14,7 @@ import { useStyles } from "./styles";
 import s1 from "../../assets/icons/s1.png";
 import s2 from "../../assets/icons/s2.png";
 import s3 from "../../assets/icons/s3.png";
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
