@@ -8,7 +8,7 @@ import food from "../../assets/food.svg";
 import health from "../../assets/health.svg";
 import funding from "../../assets/funding.svg";
 import { Service } from "../General/Service";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import s1 from "../../assets/icons/s1.png";
 import s2 from "../../assets/icons/s2.png";
@@ -42,6 +42,13 @@ const Services = () => {
       branches: "15",
     },
   ];
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <Container

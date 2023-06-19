@@ -18,12 +18,19 @@ import d4 from "../../assets/d4.svg";
 import { useForm } from "@mantine/form";
 import Button from "../../components/Button";
 import { useStyles } from "./styles";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 const Donations = () => {
   const matches600 = useMediaQuery("(min-width: 600px)");
-  const {translate}=useContext(UserContext)
+  const { translate } = useContext(UserContext);
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const { classes } = useStyles();
   const form = useForm({
     initialValues: {
@@ -36,10 +43,14 @@ const Donations = () => {
     },
 
     validate: {
-      firstName: (value) => (value?.length < 1 ? translate("Enter First Name") : null),
-      lastName: (value) => (value?.length < 1 ? translate("Enter Last Name") : null),
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : translate("Enter valid email")),
-      phoneNo: (value) => (value?.length < 1 ? translate("Enter Phone Number") : null),
+      firstName: (value) =>
+        value?.length < 1 ? translate("Enter First Name") : null,
+      lastName: (value) =>
+        value?.length < 1 ? translate("Enter Last Name") : null,
+      email: (value) =>
+        /^\S+@\S+$/.test(value) ? null : translate("Enter valid email"),
+      phoneNo: (value) =>
+        value?.length < 1 ? translate("Enter Phone Number") : null,
       amount: (value) => (value < 1 ? translate("Enter Amount") : null),
     },
   });
@@ -91,23 +102,40 @@ const Donations = () => {
       >
         <Stack spacing={"20px"} w={matches600 ? "45%" : "100%"}>
           <Title order={1} mt="0px">
-            {translate("Empower the Gypsy Community Donate and Make a Lasting Impact")}
+            {translate(
+              "Empower the Gypsy Community Donate and Make a Lasting Impact"
+            )}
           </Title>
           <Text>
-            {translate("Ignite hope. Unleash compassion. Support the Gypsy community. Your donation breathes life into forgotten dreams, breaking chains of marginalization. Together, we create a symphony of transformation, painting a brighter future. Let love and understanding guide our path, rewriting their story with unwavering kindness. Make an indelible mark of empathy, for every heartfelt gift shapes their lives")}.
+            {translate(
+              "Ignite hope. Unleash compassion. Support the Gypsy community. Your donation breathes life into forgotten dreams, breaking chains of marginalization. Together, we create a symphony of transformation, painting a brighter future. Let love and understanding guide our path, rewriting their story with unwavering kindness. Make an indelible mark of empathy, for every heartfelt gift shapes their lives"
+            )}
+            .
           </Text>
           <List mt={"xl"}>
             <List.Item>
-              {translate("Your support celebrates the vibrant culture of the Gypsy people")}.
+              {translate(
+                "Your support celebrates the vibrant culture of the Gypsy people"
+              )}
+              .
             </List.Item>
             <List.Item>
-              {translate("By amplifying their voices, you nurture their dreams for a better future")}.
+              {translate(
+                "By amplifying their voices, you nurture their dreams for a better future"
+              )}
+              .
             </List.Item>
             <List.Item>
-              {translate("Your generosity becomes a catalyst for positive change")}.
+              {translate(
+                "Your generosity becomes a catalyst for positive change"
+              )}
+              .
             </List.Item>
             <List.Item>
-              {translate("Together, we can make a profound difference in their lives")}.
+              {translate(
+                "Together, we can make a profound difference in their lives"
+              )}
+              .
             </List.Item>
           </List>
         </Stack>

@@ -5,7 +5,7 @@ import { ChevronsRight } from "tabler-icons-react";
 import videoBG from "../../assets/videoBG.svg";
 import routeNames from "../../routes/routeNames";
 import { useStyles } from "./styles";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 const AboutUs = () => {
@@ -13,6 +13,13 @@ const AboutUs = () => {
   const { classes } = useStyles();
   const {translate}=useContext(UserContext)
   const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <Grid

@@ -60,6 +60,13 @@ const index = () => {
       branches: "15",
     },
   ];
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <Carasoul
@@ -72,6 +79,7 @@ const index = () => {
       <Flex
         justify={"flex-end"}
         m={"md"}
+       
         className={classes.more}
         onClick={() => navigate(routeNames.general.services)}
       >

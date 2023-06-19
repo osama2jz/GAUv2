@@ -20,36 +20,44 @@ const Partner = () => {
   const {translate}=useContext(UserContext)
 
   return (
-    <Grid mt={"xl"} p={"xl"}>
-      <Grid.Col span={12} md={6} lg={5.5}>
-        <Stack p={"xl"}>
+    <Grid mt={"xl"} p={"xl"}m="0px">
+      <Grid.Col md={6} lg={5.5}>
+        <Stack p={"xl"} m={"10px"}>
           <Card
             shadow="md"
             padding="md"
             withBorder
-            w={matches600 ? "25rem" : "13rem"}
-            h={matches600 ? "24rem" : "13rem"}
+            // w={matches600 ? "350px" : "13rem"}
+            // h={matches600 ? "350px" : "13rem"}
+            style={{
+              maxHeight:"fit-content",
+              maxWidth:"fit-content"
+            }}
             ml={matches600 ? "" : "-20px"}
 
           >
-            <Image src={Pic2} height={350} alt="Norway" />
+            <Image src={Pic2} height={"fit-content"} alt="Norway" />
           </Card>
           <Card
             shadow="md"
             padding="md"
             withBorder
-            w={matches600 ? "25rem" : "13rem"}
-            h={matches600 ? "24rem" : "13rem"}
-            ml={matches600 ? "160px" : "90px"}
+            // w={matches600 ? "350px" : "300px"}
+            // h={matches600 ? "350px" : "250px"}
+            ml={matches600 ? "160px" : "50px"}
             mt={matches600 ? "-300px" : "-200px"}
+            style={{
+              maxHeight:"fit-content",
+              maxWidth:"fit-content"
+            }}
           >
-            <Image src={Pic1} height={350} alt="Norway" />
+            <Image src={Pic1} height={matches600 ?"320px":"200px"} width={matches600 ?"300px":"200px"} alt="Norway" />
           </Card>
         </Stack>
       </Grid.Col>
-      <Grid.Col span={12} md={6} lg={5} p={"xl"}>
+      <Grid.Col  md={6} lg={5} p={"xl"}>
         <Group>
-          <Title align="center" size={"40px"}>
+          <Title align="center" size={"30px"}>
             {translate("Become Our Partner")}
           </Title>
           <Text align="justify" size={"lg"}>

@@ -43,6 +43,7 @@ const Donation = () => {
           style={{ position: "absolute", height: "100%", width: "100%" }}
           align="center"
           justify={"center"}
+          
         >
           <div
             style={{
@@ -53,7 +54,7 @@ const Donation = () => {
             className={classes.animation}
           >
             <Text
-              size={matches600 ? "3vw" : "6vw"}
+              size={"25px"}
               weight="bold"
               align="center"
               color="white"
@@ -62,7 +63,7 @@ const Donation = () => {
               <b className="fgColorF">{translate("Make a Donation")} </b>
             </Text>
             <Text
-              size={matches600 ? "1.2vw" : "2.5vw"}
+              size={"15px"}
               // weight="bold"
               align="center"
               color="white"
@@ -71,15 +72,16 @@ const Donation = () => {
               mr={"auto"}
             >
               {
-                "Your donation can empower the Gypsy community in Spain. Give today and make a lasting impact. Your contribution will directly support our efforts to empower and uplift Gypsy individuals and families. With your generous donation, we can provide education, healthcare, and social support programs tailored to their specific needs"
+                translate("Your donation can empower the Gypsy community in Spain. Give today and make a lasting impact. Your contribution will directly support our efforts to empower and uplift Gypsy individuals and families. With your generous donation, we can provide education, healthcare, and social support programs tailored to their specific needs")
               }
             </Text>
           </div>
           <Button
             label="Donate now"
             primary={true}
-            size={matches600 ? "lg" : "md"}
+            size={matches600 ? "lg" : "sm"}
             onClick={() => navigate(routeNames.general.donate)}
+           
           />
         </Stack>
       </Card>

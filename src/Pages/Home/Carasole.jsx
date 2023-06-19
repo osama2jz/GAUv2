@@ -44,10 +44,12 @@ const SearchBackground = ({ carouselImages }) => {
           style={{
             zIndex: 10,
             width: "100%",
+            padding:"5px",
+            marginTop:"2px"
           }}
         >
           <Text
-            size={matches600 ? "3vw" : "5vw"}
+            size={matches600 ? "3vw" : "20px"}
             weight="bold"
             align="center"
             color="white"
