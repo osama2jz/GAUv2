@@ -1,21 +1,17 @@
 import {
-  Badge,
-  Button,
   Card,
   Container,
   Group,
   Image,
-  SimpleGrid,
-  Text,
+  Text
 } from "@mantine/core";
-import React from "react";
-import { useStyles } from "./styles";
-import { useContext } from "react";
-import { UserContext } from "../../contexts/UserContext";
 import { useMediaQuery } from "@mantine/hooks";
+import React, { useContext } from "react";
 import { Star } from "tabler-icons-react";
-import star from "../../assets/icons/star.png";
 import profile from "../../assets/icons/profile.png";
+import star from "../../assets/icons/star.png";
+import { UserContext } from "../../contexts/UserContext";
+import { useStyles } from "./styles";
 
 export const Service = ({ data }) => {
   const { classes } = useStyles();

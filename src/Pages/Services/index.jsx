@@ -54,7 +54,7 @@ const Services = () => {
           backgroundRepeat: "no-repeat",
           overflow: "hidden",
           position: "relative",
-          filter: "brightness(0.8)",
+          // filter: "brightness(0.8)",
         }}
         h={matches600 ? "500px" : "300px"}
         mb="xl"
@@ -64,11 +64,11 @@ const Services = () => {
             position: "absolute",
             width: "100%",
             height: "100%",
-            backgroundColor: "rgb(0,0,0,0.2)",
+            backgroundColor: "rgb(0,0,0,0.5)",
           }}
         ></div>
         <Title
-        zIndex={5}
+          zIndex={5}
           order={1}
           pos={"absolute"}
           top={"50%"}
@@ -98,10 +98,10 @@ const Services = () => {
         />
         <Stack spacing={"0px"} w={matches600 ? "45%" : "100%"}>
           <Text mt="lg" color="green">
-            {"WE PROVIDE"}
+            {translate("WE PROVIDE")}
           </Text>
           <Title order={1} mt="0px">
-            {"Transforming Lives, One Act of Kindness at a Time"}
+            {translate("Transforming Lives, One Act of Kindness at a Time")}
           </Title>
           <Text>
             {translate(
